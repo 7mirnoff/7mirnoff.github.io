@@ -1,0 +1,237 @@
+html {
+    height: 100vh;
+    min-height: 900px;
+}
+body {
+    position: absolute;
+    margin: 0;
+    padding: 0.2rem 0.1rem 0 0.1rem;
+    width: 100%;
+    height: 100%;
+    min-height: 900px;
+    background: #333333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*gap: 0.4rem;*/
+    /*overflow: hidden;*/
+}
+
+#banner {
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    font-size: 3.2rem;
+}
+
+#year {
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    font-size: 4.2rem;
+}
+
+#tree {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*flex-grow: 1;*/
+    gap: 0.3rem;
+}
+.tree-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+}
+.tree-btn {
+    padding-left: 2px;
+    padding-right: 2px;
+    opacity: 0.7;
+}
+
+.star-glow {
+    color: #fff200;
+    text-shadow:
+            0 0 4px #fff,
+            0 0 60px #fff200,
+            0 0 100px #fff200
+}
+
+.neon-text-1 {
+    color: #fff;
+    font-weight: 200;
+    text-shadow:
+            0 0 4px #fff,
+            0 0 10px #fff,
+            0 0 40px #f09,
+            0 0 60px #f09,
+            0 0 80px #f09,
+            0 0 90px #f09,
+            0 0 100px #f09,
+            0 0 150px #f09;
+}
+
+@media not (any-pointer:coarse) {
+    .neon-text-1 {
+        animation: neon-flicker-1 2100ms infinite alternate;
+    }
+}
+
+@keyframes neon-flicker-1 {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow:
+                0 0 4px #fff,
+                0 0 10px #fff,
+                0 0 40px #f09,
+                0 0 60px #f09,
+                0 0 80px #f09,
+                0 0 90px #f09,
+                0 0 100px #f09,
+                0 0 150px #f09;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+.neon-text-2 {
+    color: #fff;
+    font-weight: 200;
+    text-shadow:
+            0 0 4px #fff,
+            0 0 10px #fff,
+            0 0 40px #00FFD9,
+            0 0 60px #00FFD9,
+            0 0 80px #00FFD9,
+            0 0 90px #00FFD9,
+            0 0 100px #00FFD9;
+}
+
+@media not (any-pointer:coarse) {
+    .neon-text-2 {
+        animation: neon-flicker-2 1900ms infinite alternate;
+    }
+}
+
+@keyframes neon-flicker-2 {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow:
+                0 0 4px #fff,
+                0 0 10px #fff,
+                0 0 40px #00FFD9,
+                0 0 60px #00FFD9,
+                0 0 80px #00FFD9,
+                0 0 90px #00FFD9,
+                0 0 100px #00FFD9,
+                0 0 150px #00FFD9;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+.stem-btn {
+    background: #664133;
+}
+
+@keyframes grow-font {
+    100% {
+        font-size: 6rem;
+    }
+}
+
+.gift {
+    color: #cc234d;
+    font-size: 2.9rem;
+    transform: translate(-50%, 0%);
+    animation: grow-font 0.5s alternate-reverse;
+}
+
+.cat {
+    font-size: 3.2rem;
+    color: #cccccc;
+    transform: translate(-50%, 0%);
+    animation: grow-font 0.5s alternate-reverse;
+}
+
+.ball {
+    font-size: 1.1rem;
+}
+
+.ball-1 {
+    color: #fff200;
+    text-shadow: 0 0 35px #fff200;
+}
+.ball-2 {
+    color: #ff0044;
+    text-shadow: 0 0 35px #ff0044;
+}
+.ball-3 {
+    color: #00B2FF;
+    text-shadow: 0 0 35px #00B2FF;
+}
+.ball-4 {
+    color: #DD00FF;
+    text-shadow: 0 0 35px #DD00FF;
+}
+.ball-5 {
+    color: #00ff15;
+    text-shadow: 0 0 35px #00ff15;
+}
+.ball-6 {
+    color: #ffffff;
+    text-shadow: 0 0 35px #ffffff;
+}
+
+.wish {
+    pointer-events: none;
+    font-size: 2rem;
+    font-weight: 400;
+    color: white;
+    /*text-shadow: 0 0 30px #ffffff;*/
+    white-space: nowrap;
+    position: absolute;
+    /*top: 50%;*/
+    /*left: 50%;*/
+    transform-origin: 0 0;
+    transform: translate(-50%, -50%);
+    animation: grow-wish 1100ms;
+    padding: 0 1rem;
+    background: #953d9b;
+    border-radius: 2rem;
+}
+@keyframes grow-wish {
+    0% {
+        scale: 0;
+    }
+    50% {
+        scale: 1;
+    }
+    100% {
+        scale: 0;
+    }
+}
+
+@media (any-pointer:coarse) {
+    .wish {
+        animation: grow-wish-alt 1300ms;
+    }
+}
+
+@keyframes grow-wish-alt {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.btn {
+    /*transition: none !important;*/
+}
